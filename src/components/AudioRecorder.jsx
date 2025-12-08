@@ -14,7 +14,7 @@ export default function AudioRecorder({setMessage , setProcessing}) {
 
             // Use fetch directly or adjust postJSON to handle FormData without JSON
             setProcessing(true);
-            const response = await fetch("http://localhost:5000/api/advisory/stt", {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE}/advisory/stt`, {
                 method: "POST",
                 body: formData,
             });

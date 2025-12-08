@@ -20,7 +20,7 @@ export default function PesticideRestrictionChecker() {
   useEffect(() => {
     async function loadAll() {
       try {
-        const res = await fetch("http://localhost:5000/api/pesticides");
+        const res = await fetch(`${import.meta.env.VITE_API_BASE}/pesticides`);
         const data = await res.json();
         setAllPesticides(data);
       } catch (err) {
@@ -36,7 +36,7 @@ export default function PesticideRestrictionChecker() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/pesticides/${encodeURIComponent(name)}`
+        `import.meta.env.VITE_API_BASE/pesticides/${encodeURIComponent(name)}`
       );
 
       if (!res.ok) {

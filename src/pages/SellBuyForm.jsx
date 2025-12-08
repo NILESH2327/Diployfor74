@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import farm from "../assets/farm.png";
+import farm from "../assets/farmer.webp";
 import CloudinaryUploader from "../components/ImageUploader";
 import { getJSON, postJSON, putJSON } from "../api";
 import { toast } from "react-toastify";

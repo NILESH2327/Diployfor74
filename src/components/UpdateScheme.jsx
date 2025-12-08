@@ -44,7 +44,7 @@ const {schemeId}=useParams();
   const updateScheme = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:5000/api/schemes/${schemeId}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE}/schemes/${schemeId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(scheme),
